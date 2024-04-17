@@ -46,6 +46,7 @@
                 <span class="close" @click="closeModal()">❌</span>
             </div>
         </div>
+        <p v-if="messageError != null">{{messageError}}</p>
 
     </div>
 
