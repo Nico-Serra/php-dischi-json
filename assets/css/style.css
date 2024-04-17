@@ -7,6 +7,7 @@
 body {
     background-color: #2a3438;
     font-family: "Open Sans", sans-serif;
+    position: relative;
 }
 
 header {
@@ -51,4 +52,32 @@ img {
     font-size: 20px;
     font-weight: bold;
     padding: 1rem 0;
+}
+
+.modale {
+    height: 100%;
+    width: 100%;
+    background-color: #1d4141d3;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .close{
+        position: absolute;
+        position: fixed;
+        font-size: 30px;
+        right: 0;
+        top: 0;
+    }
 }

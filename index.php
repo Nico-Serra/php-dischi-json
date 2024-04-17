@@ -21,21 +21,32 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-4" v-for="disc in discs">
-                    <div class="card">
+                <div class="col-4" v-for="(disc,index) in discs">
+                    <div class="card" @click="selectDisc(disc)">
                         <img class="card-img-top" :src="disc.poster" alt="Title" />
                         <div class="card-body text-center">
                             <h4 class="card-title">{{disc.title}}</h4>
                             <p class="card-text">{{disc.author}}</p>
                             <p class="card-text year">{{disc.year}}</p>
                             <p class="card-text">{{disc.genre}}</p>
-
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+        <div class="modale" v-if="discSelect != null">
+            <div class="card"><img :src="discSelect.poster" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{{discSelect.title}}</h4>
+                    <p class="card-text">{{discSelect.author}}</p>
+                    <p class="card-text year">{{discSelect.year}}</p>
+                    <p class="card-text">{{discSelect.genre}}</p>
+                </div>
+                <span class="close" @click="closeModal()">❌</span>
+            </div>
+        </div>
+
     </div>
 
 
